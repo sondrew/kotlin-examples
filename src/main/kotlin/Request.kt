@@ -6,7 +6,7 @@ import java.net.URL
 const val DELAY_IN_MS = 2000
 
 fun getUser(user: Int = 1): String {
-    println("getUser($user)")
+    println("getUser($user) - ${Thread.currentThread().name}")
     val requestUrl = "https://reqres.in/api/users/$user"
     val delayUrl = URL("https://app.requestly.io/delay/$DELAY_IN_MS/$requestUrl")
 
